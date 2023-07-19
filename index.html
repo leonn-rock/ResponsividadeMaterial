@@ -6,17 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsividade V1</title>
     <link rel="stylesheet" href="styles/index.css">
-    <link rel="stylesheet" href="Styles/paisagem.css" media="screen and (orientation:landscape)">
-    <link rel="stylesheet" href="Styles/retrato.css"  media="screen and (orientation:portrait)">
+    <link rel="stylesheet" href="styles/paisagem.css" media="screen and (orientation:landscape)">
+    <link rel="stylesheet" href="styles/retrato.css"  media="screen and (orientation:portrait)">
 </head>
 
 <body>
     <div id="pagina">
-        <img src="images/mulherdancando.jpg" alt="uma mulher dançando" id="dancandoGrande">
+        <nav>
+            <picture>
+                <source media="(max-width:730px)" srcset="images/menuIcon-branco.svg">
+                <img src="images/menuIcon.svg" alt="ícone do menu" id="menu" onclick="mostrar()">
+            </picture>
+            <ul  id="menuOpcoes">
+                <li>Opcao</li>
+                <li>Opcao</li>
+                <li>Opcao</li>
+                <li>Opcao</li>
+                <li>Opcao</li>
+            </ul>
+        </nav>
+        <picture>
+            <source media="(max-width:600px)" srcset="images/mulherdancandoMenor.jpg"><!-- NESTE CASO, NÃO PRECISA DE SCREEN DENTRO DO MEDIA -->
+            <img src="images/mulherdancando.jpg" alt="uma mulher dançando" class="banner">
+        </picture>
+        
         <h1>Um título bacana</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto nobis sequi, eveniet ut doloribus quo, cum est optio voluptates nisi distinctio maiores nesciunt natus adipisci, voluptate inventore minima. Voluptas, maxime? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic laudantium repellendus explicabo earum blanditiis minus eum maxime ducimus, quae ad quos, distinctio tempore cum modi nobis! Natus quae veritatis necessitatibus? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem ad aspernatur perferendis, voluptatibus temporibus labore, eligendi velit officiis non quia voluptas odit id hic ducimus eius, a dolorum rem quasi! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui cumque alias quibusdam commodi similique consequuntur dolor, aliquid quaerat officiis? Possimus debitis eius impedit ipsum, autem fuga vitae omnis amet repudiandae.</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto nobis sequi, eveniet ut doloribus quo, cum est optio voluptates nisi distinctio maiores nesciunt natus adipisci, voluptate inventore minima. Voluptas, maxime? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic laudantium repellendus explicabo earum blanditiis minus eum maxime ducimus, quae ad quos, distinctio tempore cum modi nobis! Natus quae veritatis necessitatibus? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem ad aspernatur perferendis, voluptatibus temporibus labore, eligendi velit officiis non quia voluptas odit id hic ducimus eius, a dolorum rem quasi! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui cumque alias quibusdam commodi similique consequuntur dolor, aliquid quaerat officiis? Possimus debitis eius impedit ipsum, autem fuga vitae omnis amet repudiandae.</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto nobis sequi, eveniet ut doloribus quo, cum est optio voluptates nisi distinctio maiores nesciunt natus adipisci, voluptate inventore minima. Voluptas, maxime? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic laudantium repellendus explicabo earum blanditiis minus eum maxime ducimus, quae ad quos, distinctio tempore cum modi nobis! Natus quae veritatis necessitatibus? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem ad aspernatur perferendis, voluptatibus temporibus labore, eligendi velit officiis non quia voluptas odit id hic ducimus eius, a dolorum rem quasi! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui cumque alias quibusdam commodi similique consequuntur dolor, aliquid quaerat officiis? Possimus debitis eius impedit ipsum, autem fuga vitae omnis amet repudiandae.</p>
     </div>
+    <script> /* O JAVASCRIPT INTERPRETA AS LINHAS SEM A NECESSIDADE DE PONTO E VÍRGULA*/
+        function mostrar(){
+            if (menuOpcoes.style.display =="none"){
+                menuOpcoes.style.display = "block"
+            }
+            else{
+                menuOpcoes.style.display = "none"
+            }
+
+        }
+    </script>
 </body>
 </html>
